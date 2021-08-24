@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    border: 2px solid black;
+}
+
+section .slide{
+    position: relative;
+    background: salmon;
+    height: 100%;
+    flex:1;
+    border-right:2px solid black ;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+   
+}
+
+section .slide:last-child{
+    border-right:none;
+}
+
+section .slide:hover{
+    flex-grow: 5;
+}
+
+section .slide .content{
+    position: absolute;
+    bottom: 0;
+    margin: 40px;
+    padding: 30px;
+    background: black;
+    color: cornsilk;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0s;
+    transform: translateY(100px);
+    
+}
+
+section .slide:hover .content{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transform: translateY(0);
+    
+}
+
+section .slide:nth-child(5){
+    background-image: url(image/enot.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+section .slide:nth-child(4){
+    background-image: url(image/white.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+section .slide:nth-child(3){
+    background-image: url(image/index.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+section .slide:nth-child(2){
+    background-image: url(image/tiger.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+section .slide:nth-child(1){
+    background-image: url(image/leo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+

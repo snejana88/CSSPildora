@@ -1,0 +1,131 @@
+*@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: changeBgColor 4s steps(1) infinite;
+  
+}
+a{
+    background: black;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    text-decoration: none;
+}
+@keyframes changeBgColor 
+{
+    0%{
+        background: rgb(15, 199, 15);
+
+    }
+    25%{
+        background: pink;
+    
+    }
+    50%{
+        background: rgba(185, 218, 42, 0.6);
+    
+    }
+    75%{
+        background: rgb(19, 130, 158);
+    
+    }
+    100%{
+        background: rgb(3, 3, 2);
+    
+    }
+}
+.loader{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: black;
+    animation: rotate 1s linear infinite;;
+   
+}
+
+.loader div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(22, 7, 7);
+    animation: animate 1s linear infinite;    
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);      
+    }
+    50%,100%{
+        transform: rotate(180deg);
+        
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(90deg);       
+}
+    50%,100%{
+        transform: rotate(0deg);       
+}
+}
+
+.loader div:nth-child(1){
+    top: -100%;
+    left: 2px;
+    transform-origin: bottom right;
+}
+
+.loader div:nth-child(1):before{
+    background: rgb(23, 128, 177);
+}
+
+.loader div:nth-child(2){
+    right: -100%;
+    top: 2px;
+    transform-origin: bottom left;
+}
+.loader div:nth-child(2):before{
+    background:rgb(82, 201, 14);
+}
+
+.loader div:nth-child(3){
+    bottom: -100%;
+    left: -2px;
+    transform-origin: top left;
+}
+.loader div:nth-child(3):before{
+    background: rgb(196, 87, 187);
+}
+
+.loader div:nth-child(4){
+    left: -100%;
+    top: -2px;
+    transform-origin: top right;
+}
+.loader div:nth-child(4):before{
+    background: rgb(139, 0, 104);
+    
+}
+
+.loader::before,
+.loader div::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: rgb(229, 233, 7);
+    box-shadow: 0 0 10px blue;
+} 
